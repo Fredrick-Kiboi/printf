@@ -10,15 +10,15 @@ int _printf(const char *format, ...)
 {
 	switch_conversion s[] = {
 		{"%c", for_char}, {"%s", for_string},
-		{"%%", for_percent}, {"%d", for_decimal},
+		{"%'%'", for_percent}, {"%d", for_decimal},
 		{"%i", for_int}
 	};
 		
 	va_list ap;
-	int a, b, c;
+	int a, b, c, len;
 	b = 0;
 	c = (sizeof(s) / sizeof(s[0]));
-	int len = 0;
+	len = 0;
 	
 	va_start(ap, format);
 	if (format == NULL)
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		{
 			if (s[a].q[0] == format[b] && s[a].[q][1] == format[b + 1])
 			{
-				len += s[a].p[ap];
+				len += s[a].p(ap);
 			}
 		}
 		_putchar(format[b]);
