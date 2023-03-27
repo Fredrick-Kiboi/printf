@@ -18,9 +18,9 @@ int _printf(const char *format, ...)
 	int a, b, c;
 	b = 0;
 	c = (sizeof(s) / sizeof(s[0]));
-	len = 0;
+	int len = 0;
 	
-	va_start(arg, format);
+	va_start(ap, format);
 	if (format == NULL)
 		return (-1);
 
@@ -28,9 +28,9 @@ int _printf(const char *format, ...)
 	{
 		for (a = 0; a < c; a++)
 		{
-			if (s[a][0] == format[b] && s[a][1] == format[b + 1])
+			if (s[a].q[0] == format[b] && s[a].[q][1] == format[b + 1])
 			{
-				len += s[a].f[ap];
+				len += s[a].p[ap];
 			}
 		}
 		_putchar(format[b]);

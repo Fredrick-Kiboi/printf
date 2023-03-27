@@ -8,9 +8,14 @@
 
 int for_percent(va_list ap)
 {
+	char l = va_arg(ap, int);
 	int count = 0;
-	putchar('%');
-	count++;
+	
+	if (l == '%')
+	{
+		putchar('%');
+		count++;
+	}
 
 	return (count);
 }

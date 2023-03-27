@@ -8,7 +8,7 @@
 
 int for_decimal(va_list ap)
 {
-	int f, k, sum;
+	int f, g, k, sum;
 
 	g = va_arg(ap, int);
 	f = ((g / 10) * 10);
