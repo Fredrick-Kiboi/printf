@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 			if (s[a].q[0] == format[b] && s[a].[q][1] == format[b + 1])
 			{
 				len += s[a].p(ap);
+				b = b + 2;
 			}
 		}
 		_putchar(format[b]);
