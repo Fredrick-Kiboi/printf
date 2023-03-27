@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 
 	while (format[b] != '\0')
 	{
-		for (a = 0; a < c; a++)
+		for (a = c; a >= 0; a--)
 		{
 			if (s[a].q[0] == format[b] && s[a].[q][1] == format[b + 1])
 			{
