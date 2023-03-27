@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * for_char - it prints letter
