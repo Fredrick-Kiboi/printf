@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 	{
 		for (a = c; a >= 0; a--)
 		{
-			if (s[a].q[0] == format[b] && s[a].(int)[q][1] == format[b + 1])
+			if (s[a].q[0] == format[b] && s[a].q[1] == format[b + 1])
 			{
 				len += s[a].p(ap);
 			}
