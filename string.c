@@ -14,6 +14,10 @@ int for_string(va_list ap)
 	f = va_arg(ap, char *);
 	for (r = 0; f[r] != '\0'; r++)
 	{
+		if (f[r] == '%')
+		{
+			_putchar('%');
+		}
 		_putchar(f[r]);
 	}
 	return (r);
