@@ -1,18 +1,44 @@
 #include "main.h"
 
 /**
- * for_decimal - decimal is returned
+ * for_decimal - prints an integer
  * @ap: arguments
- * Return: decimal
+ * Return: an integer
  */
 
 int for_decimal(va_list ap)
 {
-	int f, g, k, sum;
+	int a, g, count, z, b, m, q, l, r, n;
 
-	g = va_arg(ap, int);
-	f = ((g / 10) * 10);
-	k = g % 10;
-	sum = (f + k);
-	return (sum);
+	a = 1;
+	r = 0;
+	n = va_arg(ap, int);
+	m = n;
+	z = n;
+
+	while (m > 1)
+	{
+		m /= 10;
+		r++;
+	}
+	
+	l = r;
+	count = l;
+	while (r > 1)
+	{
+		a *= 10;
+		--r;
+	}
+	g = a;
+
+	while (l > 0)
+	{
+		q = z / g;
+		b = (g * q);
+		z -= b;
+		g /= 10;
+		--l;
+		_putchar(q + '0');
+	}
+	return (count);
 }
