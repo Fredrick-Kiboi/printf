@@ -2,7 +2,7 @@
 
 /**
  * _printf - implements the print function
- * @format - identifier
+ * @format: identifier
  * Return: the length of a string
  */
 
@@ -13,13 +13,12 @@ int _printf(const char *format, ...)
 		{"%%", for_percent}, {"%d", for_decimal},
 		{"%i", for_int}
 	};
-		
 	va_list ap;
 	int a, b, c, len;
+
 	b = 0;
 	c = (sizeof(s) / sizeof(s[0]));
 	len = 0;
-	
 	va_start(ap, format);
 	if (format == NULL)
 		return (-1);

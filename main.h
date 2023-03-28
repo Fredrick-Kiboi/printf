@@ -10,8 +10,12 @@
 #include <limits.h>
 #include <ctype.h>
 
-int _putchar(char c);
-
+/**
+ * struct format - format is the name of the function
+ * @q: 1st argument
+ * @p: 2nd argument
+ * Description: struct
+ */
 typedef struct format
 {
 	char *q;
@@ -19,6 +23,7 @@ typedef struct format
 } switch_conversion;
 
 int for_char(va_list ap);
+int _putchar(char c);
 int for_decimal(va_list ap);
 int for_string(va_list ap);
 int for_percent(void);

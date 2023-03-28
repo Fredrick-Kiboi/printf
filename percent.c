@@ -2,7 +2,6 @@
 
 /**
  * for_percent - prints a percent sign
- * @ap: list of arguments
  * Return: number of characters printed
  */
 

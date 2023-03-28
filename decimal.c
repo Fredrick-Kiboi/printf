@@ -3,16 +3,15 @@
 /**
  * for_decimal - prints a decimal
  * @ap: arguments
- * Return: a decimal 
+ * Return: a decimal
  */
 
 int for_decimal(va_list ap)
 {
 	int n, count, i, divisor;
-	n = va_arg(ap, int);
 
+	n = va_arg(ap, int);
 	count = 0;
-	
 	if (n < 0)
 	{
 		_putchar('-');
@@ -28,6 +27,7 @@ int for_decimal(va_list ap)
 	{
 		int m = n;
 		int num_digits = 0;
+
 		while (m > 0)
 		{
 			m /= 10;
@@ -35,12 +35,11 @@ int for_decimal(va_list ap)
 		}
 		divisor = 1;
 		for (i = 1; i < num_digits; i++)
-		{
 			divisor *= 10;
-		}
 		while (divisor > 0)
 		{
 			int digit = n / divisor;
+
 			_putchar(digit + '0');
 			n %= divisor;
 			divisor /= 10;
