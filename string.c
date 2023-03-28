@@ -16,5 +16,5 @@ int for_string(va_list ap)
 	{
 		_putchar(f[r]);
 	}
-	return (0);
+	return (r);
 }

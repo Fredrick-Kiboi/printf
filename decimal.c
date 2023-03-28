@@ -1,44 +1,51 @@
 #include "main.h"
 
 /**
- * for_decimal - prints an integer
+ * for_decimal - prints a decimal
  * @ap: arguments
- * Return: an integer
+ * Return: a decimal 
  */
 
 int for_decimal(va_list ap)
 {
-	int a, g, count, z, b, m, q, l, r, n;
-
-	a = 1;
-	r = 0;
+	int n, count, i, divisor;
 	n = va_arg(ap, int);
-	m = n;
-	z = n;
 
-	while (m > 1)
-	{
-		m /= 10;
-		r++;
-	}
+	count = 0;
 	
-	l = r;
-	count = l;
-	while (r > 1)
+	if (n < 0)
 	{
-		a *= 10;
-		--r;
+		_putchar('-');
+		n = -n;
+		count++;
 	}
-	g = a;
-
-	while (l > 0)
+	if (n == 0)
 	{
-		q = z / g;
-		b = (g * q);
-		z -= b;
-		g /= 10;
-		--l;
-		_putchar(q + '0');
+		_putchar('0');
+		count++;
+	}
+	else
+	{
+		int m = n;
+		int num_digits = 0;
+		while (m > 0)
+		{
+			m /= 10;
+			num_digits++;
+		}
+		divisor = 1;
+		for (i = 1; i < num_digits; i++)
+		{
+			divisor *= 10;
+		}
+		while (divisor > 0)
+		{
+			int digit = n / divisor;
+			_putchar(digit + '0');
+			n %= divisor;
+			divisor /= 10;
+			count++;
+		}
 	}
 	return (count);
 }

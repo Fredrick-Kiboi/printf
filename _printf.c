@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	switch_conversion s[] = {
 		{"%c", for_char}, {"%s", for_string},
-		{"%'%'", for_percent}, {"%d", for_decimal},
+		{"%%", for_percent}, {"%d", for_decimal},
 		{"%i", for_int}
 	};
 		

@@ -9,13 +9,12 @@
 int for_percent(va_list ap)
 {
 	char l = va_arg(ap, int);
-	int count = 0;
+	int count = 1;
 	
 	if (l == '%')
 	{
-		putchar('%');
+		_putchar('%');
 		count++;
 	}
-	printf("%d", count);
-	return (0);
+	return (count);
 }
