@@ -9,16 +9,16 @@
 int for_string(va_list ap)
 {
 	int r;
-	char *f;
+	char *b;
 
-	f = va_arg(ap, char *);
-	for (r = 0; f[r] != '\0'; r++)
+	b = va_arg(ap, char *);
+	for (r = 0; b[r] != '\0'; r++)
 	{
-		if (f[r] == '%')
+		if (b[r] == '%')
 		{
 			_putchar('%');
 		}
-		_putchar(f[r]);
+		_putchar(b[r]);
 	}
 	return (r);
 }
