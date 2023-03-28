@@ -14,6 +14,5 @@ int for_decimal(va_list ap)
 	f = ((g / 10) * 10);
 	k = g % 10;
 	sum = (f + k);
-	printf("%d", sum);
-	return (0);
+	return (sum);
 }

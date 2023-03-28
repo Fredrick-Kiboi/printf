@@ -15,7 +15,7 @@ int _putchar(char c);
 typedef struct format
 {
 	char *q;
-	int (*p)();
+	int (*p)(va_list ap);
 } switch_conversion;
 
 int for_char(va_list ap);

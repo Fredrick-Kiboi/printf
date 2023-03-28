@@ -2,36 +2,42 @@
 
 /**
  * for_int - prints an integer
- *
- * @ap: the arguments
- * Return: sum
+ * @ap: arguments
+ * Return: an integer
  */
 
 int for_int(va_list ap)
 {
-	int f, sum, k, g, n;
-	char *r;
+	int a, g, count, z, b, m, q, l, r, n;
 
-	if ((isdigit(va_arg(ap, int))))
+	a = 1;
+	n = va_arg(ap, int);
+	m = n;
+	z = n;
+
+	while (m > 1)
 	{
-		g = va_arg(ap, int);
-		f = ((g / 10) * 10);
-		k = g % 10;
-		sum = (f + k);
+		m /= 10;
+		r++;
 	}
-	else if ((isalpha(va_arg(ap, char *))))
+	
+	l = r;
+	count = l;
+	while (r > 1)
 	{
-		sum = 0;
-		r = va_arg(ap, char *);
-		for (n = 0; r[n] != '\0'; n++)
-		{
-			_putchar(r[n]);
-			sum++;
-		}
+		a *= 10;
+		--r;
 	}
-	else
+	g = a;
+
+	while (l > 0)
 	{
-		;
+		q = z / g;
+		b = (g * q);
+		z -= b;
+		g /= 10;
+		--l;
+		_putchar(q);
 	}
-	return (sum);
+	return (count);
 }
