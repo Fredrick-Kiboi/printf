@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
+start:
 	while (format[b] != '\0')
 	{
 		for (a = 0; a < c; a++)
@@ -31,6 +32,8 @@ int _printf(const char *format, ...)
 			if (s[a].q[0] == format[b] && s[a].q[1] == format[b + 1])
 			{
 				len += s[a].p(ap);
+				b = b + 2;
+				goto start;
 			}
 		}
 		_putchar(format[b]);

@@ -8,17 +8,13 @@
 
 int for_string(va_list ap)
 {
+	int r;
 	char *f;
-	int n;
 
 	f = va_arg(ap, char *);
-	n = 0;
-	while (*f != '\0')
+	for (r = 0; f[r] != '\0'; r++)
 	{
-		_putchar(*f);
-		f++;
-		n++;
+		_putchar(f[r]);
 	}
-	printf("%d", n);
 	return (0);
 }

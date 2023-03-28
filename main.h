@@ -8,6 +8,7 @@
 #include <math.h>
 #include <unistd.h>
 #include <limits.h>
+#include <ctype.h>
 
 int _putchar(char c);
 
