@@ -6,15 +6,11 @@
  * Return: number of characters printed
  */
 
-int for_percent(va_list ap)
+int for_percent(void)
 {
-	char l = va_arg(ap, int);
-	int count = 1;
-	
-	if (l == '%')
-	{
-		_putchar('%');
-		count++;
-	}
+	int count = 0;
+
+	_putchar(37);
+	count++;
 	return (count);
 }
