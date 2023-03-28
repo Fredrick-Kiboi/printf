@@ -16,6 +16,6 @@ int for_percent(va_list ap)
 		putchar('%');
 		count++;
 	}
-
-	return (count);
+	printf("%d", count);
+	return (0);
 }

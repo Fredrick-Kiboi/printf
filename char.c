@@ -14,5 +14,7 @@ int for_char(va_list ap)
 	k = 0;
 	r = va_arg(ap, int);
 	_putchar(r);
-	return (k);
+	k++;
+	printf("%d", k);
+	return (0);
 }

@@ -19,5 +19,6 @@ int for_string(va_list ap)
 		f++;
 		n++;
 	}
-	return (n);
+	printf("%d", n);
+	return (0);
 }

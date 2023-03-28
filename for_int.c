@@ -13,5 +13,6 @@ int for_int(va_list ap)
 	int f = ((g / 10) * 10);
 	int k = g % 10;
 	int sum = (f + k);
-	return (sum);
+	printf("%d", sum);
+	return (0);
 }
