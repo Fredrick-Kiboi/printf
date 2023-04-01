@@ -29,5 +29,12 @@ int for_string(va_list ap);
 int for_percent(void);
 int for_int(va_list ap);
 int _printf(const char *format, ...);
+int for_binary(va_list ap);
+int for_octal(va_list ap);
+int for_hexadecimal(va_list ap);
+int for_heXadecimal(va_list ap);
+int for_reverse(va_list);
+int for_rot13ed(va_list ap);
+int for_unsigned(va_list ap);
 
 #endif

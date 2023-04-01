@@ -1,0 +1,51 @@
+#include "main.h"
+
+/**
+ * for_octal - prints octal 
+ * @ap: arguments
+ * Return: 0
+ */
+
+int for_octal(va_list ap)
+{
+	long int x = va_arg(ap, long int);
+	int count = 0, *y, c, j;
+
+	if (x < 0)
+	{
+		_putchar('-');
+		x = -x;
+		count++;
+	}
+	if (x == INT_MAX)
+	{
+		count = sizeof(int) * 8 - 1;
+	}
+	else if (x <= -INT_MAX)
+	{
+		count = sizeof(long int) * 8;
+	}
+	else
+	{
+		long int a = x;
+		long int b = x;
+
+		while (a > 0)
+		{
+			a /= 8;
+			count++;
+		}
+		y = (int*) malloc(count * sizeof(int));
+
+		for (c = 0; c < count; c++)
+		{
+			y[c] = b % 8;
+			b /= 8;
+		}
+		for (j = count - 1; j >= 0; j--)
+		{
+			_putchar(y[j] + '0');
+		}
+	}
+	return (0);
+}

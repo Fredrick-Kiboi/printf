@@ -11,7 +11,9 @@ int _printf(const char *format, ...)
 	switch_conversion s[] = {
 		{"%c", for_char}, {"%s", for_string},
 		{"%%", for_percent}, {"%d", for_decimal},
-		{"%i", for_int}
+		{"%i", for_int}, {"%x", for_hexadecimal}, {"%X", for_heXadecimal},
+		{"%o", for_octal}, {"%b", for_binary}, {"%r", for_reverse}, 
+		{"%R", for_rot13ed}, {"%u", for_unsigned}
 	};
 	va_list ap;
 	int a, b, c, len;
